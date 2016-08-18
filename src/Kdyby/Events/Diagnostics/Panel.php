@@ -334,7 +334,7 @@ class Panel extends Nette\Object implements Nette\Diagnostics\IBarPanel
 
 			if (!$this->sl->isCreated($id) && ($class = array_search($id, $registeredClasses, TRUE))) {
 				$s .= '<tr><td width=18>' . $addIcon . '</td><td><pre class="nette-dump"><span class="nette-dump-object">' .
-					$h(Nette\Reflection\ClassType::from($class)->getName()) .
+					$h($class) .
 					'</span></span></th></tr>';
 
 			} else {
